@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1-beta.0 — 2026-08-12
+
+### Docs
+
+- Rebuilt the documentation as one product instead of two. The site had two top-level tabs — "Enforcement" and "Observability" — which asked every reader to work out, before reading anything, which half of a single product they were in. There is now one navigation, ordered as a journey: install and guard a machine, see what happened on it, then govern the fleet from the cloud. The observability section is repositioned as **FailproofAI Cloud** and lives at `/cloud/*` (was `/agenteye/*`), with redirects from every old URL. (#684)
+- Documented the integration surface that had no docs at all. `failproofai config --connect` was described only in `--help`: new pages cover [connecting a machine](https://docs.befailproof.ai/cloud/connect) (both capabilities, what leaves the machine, fleet provisioning, troubleshooting), [managed policies](https://docs.befailproof.ai/cloud/managed-policies) (deployments, digest verification, observe-mode rollout), [the fleet view](https://docs.befailproof.ai/cloud/fleet), and [session capture](https://docs.befailproof.ai/cloud/capture) across all 12 CLIs — replacing three per-CLI capture pages written for a separate collector. (#684)
+- Added the pages a reader kept needing and could not find: [How it works](https://docs.befailproof.ai/how-it-works) (tool call → decision → dashboard, end to end, with the failure-mode table), [the failproofaid service](https://docs.befailproof.ai/daemon) (fail-closed, supervision, how the binary arrives, upgrades), [Supported agents](https://docs.befailproof.ai/agent-support) (per-CLI matrix of what a deny can actually block — the one fact that decides whether a policy does anything), [Policies](https://docs.befailproof.ai/policies) as a hub, one merged [Concepts](https://docs.befailproof.ai/concepts) glossary, and a [files and paths](https://docs.befailproof.ai/reference/files) reference. New CLI pages for `config`, `harness`, `backfill`, `flush`, and `uninstall`. (#684)
+- Moved per-CLI hook-schema internals out of the Configuration page and into the support matrix, so configuration is about configuring again rather than a wall of vendor contracts. (#684)
+
 ## 1.0.0 — 2026-08-12
 
 The first stable release. Everything below this heading shipped across the

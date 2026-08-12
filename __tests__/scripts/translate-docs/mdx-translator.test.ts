@@ -59,10 +59,10 @@ function emptyCache(): TranslationCache {
 }
 
 describe("getEnglishMdxPages", () => {
-  it("includes AgentEye pages in automatic translation", () => {
+  it("includes cloud pages in automatic translation", () => {
     const pages = getEnglishMdxPages();
     expect(pages.length).toBeGreaterThan(0);
-    expect(pages.some((page) => page.includes("/agenteye/"))).toBe(true);
+    expect(pages.some((page) => page.includes("/cloud/"))).toBe(true);
   });
 });
 
